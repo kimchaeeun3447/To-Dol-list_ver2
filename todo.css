@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*딱히달라지는거없음*/
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+body {
+    height: 100vh;
+    background: whitesmoke;
+}
+
+.container {
+    position: relative;
+    max-width: 800px;
+    padding: 10px;
+    margin: 20px auto;
+    /*auto는 좌우의 여백을 똑같이 배분한 것*/
+    border: 10px solid rgb(115, 147, 252);
+}
+
+.addTask {
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+}
+
+.addTask>input[type="text"] {
+    width: 90%;
+    color: #333;
+    border: none;
+    border-bottom: 2px solid #666;
+    background: none;
+    padding: 10px;
+    font-size: 28px;
+    outline: none;
+    /*변화x*/
+}
+
+.addTask button {
+    margin: 0 10px;
+    background: rgb(115, 147, 252);
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /*버튼 커서로 누르는 모양으로 바뀜*/
+}
+
+.addTask button:hover {
+    background-color: rgb(75, 109, 224);
+}
+
+.notCompleted,
+.Completed {
+    margin: 5px 0;
+    padding: 20px;
+}
+
+.Completed li {
+    background-color: rgb(212, 212, 247);
+}
+
+h3 {
+    font-size: 28px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+ol {
+    list-style: none;
+    /*ol이나 ul 시 앞에 붙는 숫자or땡땡이삭제*/
+}
+
+ol li {
+    font-size: 30px;
+    list-style: none;
+    /*??변화x모르겠음*/
+    padding: 10px 5px;
+    background-color: rgba(214, 236, 255, 0.781);
+    margin: 10px 0;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px white;
+    transition: 1s;
+    text-align: left;
+    padding-left: 30px;
+    /*li 항목에 커서올리면 색이 나타나는 시간*/
+}
+
+li:hover {
+    background-color: rgb(188, 189, 240);
+    transform: translateX()/*커서를 올리면 색이 변하게*/
+}
+
+li button {
+    float: right;
+    padding: 5px;
+    font-size: 15px;
+    margin-right: 10px;
+    margin-top: 2px;
+    cursor: pointer;
+}
