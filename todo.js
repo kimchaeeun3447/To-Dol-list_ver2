@@ -3,6 +3,13 @@ const btn = document.querySelector('.addTask > button');
 
 btn.addEventListener('click', addList);
 
+//날짜 추가
+const dateElement = document.getElementById("date");
+const options = { weekday: "long", month: "short", day: "numeric" };
+const today = new Date();
+dateElement.innerHTML = today.toLocaleDateString("en-KR", options);
+
+
 /*엔터누르면 추가*/
 input.addEventListener('keyup', (e) => {
     (e.keyCode === 13 ? addList(e) : null)
@@ -27,15 +34,20 @@ function addList(e) {
         newLi.appendChild(delBtn);
     }
 
+
     checkBtn.addEventListener('click', function() {
         const parent = this.parentNode;
         parent.remove();
         Completed.appendChild(parent);
         checkBtn.style.display = 'none'; /*완료되면 체크버튼삭제*/
+        //상태저장
+
     }); /*여기 ; 붙어야하는 이유는 ?! 이것자체가 함수이름이여서?몰라!*/
 
     delBtn.addEventListener('click', function() {
         const parent = this.parentNode;
         parent.remove();
+        //상태저장
+
     });
 }

@@ -20,6 +20,11 @@ body {
     border: 10px solid rgb(115, 147, 252);
 }
 
+#date {
+    font-size: 30px;
+    text-align: center;
+}
+
 .addTask {
     width: 100%;
     display: flex;
@@ -58,6 +63,8 @@ body {
 .Completed {
     margin: 5px 0;
     padding: 20px;
+    /*넘치는 텍스트 줄바꿈*/
+    word-break: break-all;
 }
 
 .Completed li {
